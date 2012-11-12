@@ -14,11 +14,6 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" title="Report Now" id="aeh-Yu-6ol">
-                        <barButtonItem key="leftBarButtonItem" title="Back" id="7TS-K7-Yd3">
-                            <connections>
-                                <segue destination="G8f-dY-0Sy" kind="modal" id="DCG-OX-Qs2"/>
-                            </connections>
-                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" title="Submit" id="ir0-n6-Fmm"/>
                     </navigationItem>
                 </viewController>
@@ -61,7 +56,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="gbH-mL-Pgj" kind="modal" id="yd0-rE-uV8"/>
+                                    <segue destination="xap-U9-BeR" kind="push" id="yQZ-a6-faS"/>
                                 </connections>
                             </button>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="8xi-7e-hUO">
@@ -113,32 +108,14 @@
                     <navigationItem key="navigationItem" title="Incident Reporter" id="x3s-60-cc6">
                         <barButtonItem key="rightBarButtonItem" title="Settings" id="VhC-fg-roJ">
                             <connections>
-                                <segue destination="0wp-cA-wmb" kind="modal" id="iRH-GL-L4K"/>
+                                <segue destination="QJm-rR-jvd" kind="push" id="fPz-NM-Kol"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
-                    <connections>
-                        <segue destination="0wp-cA-wmb" kind="modal" id="jgH-zm-6ob"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UE7-dR-aef" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-169" y="-518"/>
-        </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="PhL-nb-gVt">
-            <objects>
-                <navigationController definesPresentationContext="YES" id="0wp-cA-wmb" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="INR-5N-HeO">
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <connections>
-                        <segue destination="QJm-rR-jvd" kind="relationship" relationship="rootViewController" id="vFO-X9-8oM"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="cnR-Bk-sM5" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="387" y="-361"/>
+            <point key="canvasLocation" x="379" y="-872"/>
         </scene>
         <!--View Controller - Settings-->
         <scene sceneID="sne-oL-oKO">
@@ -211,17 +188,12 @@
                     </view>
                     <navigationItem key="navigationItem" title="Settings" id="9gA-kk-c10">
                         <barButtonItem key="backBarButtonItem" title="Back" id="zP0-p9-DDX"/>
-                        <barButtonItem key="leftBarButtonItem" title="Back" id="NlJ-F2-3a1">
-                            <connections>
-                                <segue destination="G8f-dY-0Sy" kind="modal" id="PgI-Vk-TbH"/>
-                            </connections>
-                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="save" id="kFg-5n-Q9j"/>
                     </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2Gc-Bp-kEL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="834" y="-505"/>
+            <point key="canvasLocation" x="902" y="-499"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="K44-OB-HOq">
@@ -239,25 +211,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Zkb-XI-fVR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-89" y="-1283"/>
-        </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="51W-Kv-kdj">
-            <objects>
-                <navigationController id="gbH-mL-Pgj" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="LuZ-oN-Z2L">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="xap-U9-BeR" kind="relationship" relationship="rootViewController" id="Ygg-aS-QS9"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="5rI-Ag-G8E" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="425" y="-1186"/>
+            <point key="canvasLocation" x="-61" y="-872"/>
         </scene>
     </scenes>
     <classes>
@@ -270,8 +224,4 @@
         <simulatedOrientationMetrics key="orientation"/>
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
-    <inferredMetricsTieBreakers>
-        <segue reference="DCG-OX-Qs2"/>
-        <segue reference="jgH-zm-6ob"/>
-    </inferredMetricsTieBreakers>
 </document>
