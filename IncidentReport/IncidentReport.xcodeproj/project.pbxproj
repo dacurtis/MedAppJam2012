@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		415872711651A71800676ECD /* Incident.m in Sources */ = {isa = PBXBuildFile; fileRef = 415872701651A71800676ECD /* Incident.m */; };
 		A9B953A7165065980020A445 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A9B953A6165065980020A445 /* UIKit.framework */; };
 		A9B953A9165065980020A445 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A9B953A8165065980020A445 /* Foundation.framework */; };
 		A9B953AB165065980020A445 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A9B953AA165065980020A445 /* CoreGraphics.framework */; };
@@ -37,6 +38,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4158726F1651A71800676ECD /* Incident.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Incident.h; sourceTree = "<group>"; };
+		415872701651A71800676ECD /* Incident.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Incident.m; sourceTree = "<group>"; };
 		A9B953A2165065980020A445 /* IncidentReport.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IncidentReport.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A9B953A6165065980020A445 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		A9B953A8165065980020A445 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -124,6 +127,8 @@
 				A9B953BE165065990020A445 /* MainStoryboard_iPhone.storyboard */,
 				A9B953C1165065990020A445 /* MainStoryboard_iPad.storyboard */,
 				A9B953C4165065990020A445 /* ViewController.h */,
+				4158726F1651A71800676ECD /* Incident.h */,
+				415872701651A71800676ECD /* Incident.m */,
 				A9B953C5165065990020A445 /* ViewController.m */,
 				A9B953AD165065980020A445 /* Supporting Files */,
 			);
@@ -277,6 +282,7 @@
 				A9B953B3165065980020A445 /* main.m in Sources */,
 				A9B953B7165065990020A445 /* AppDelegate.m in Sources */,
 				A9B953C6165065990020A445 /* ViewController.m in Sources */,
+				415872711651A71800676ECD /* Incident.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -461,6 +467,7 @@
 				A9B953E0165065990020A445 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		A9B953E1165065990020A445 /* Build configuration list for PBXNativeTarget "IncidentReportTests" */ = {
 			isa = XCConfigurationList;
@@ -469,6 +476,7 @@
 				A9B953E3165065990020A445 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -26,4 +26,14 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (IBAction)reportLater:(id)sender forEvent:(UIEvent *)event
+{
+    
+}
+
+- (IBAction)reportNow:(id)sender forEvent:(UIEvent *)event
+{
+    
+}
+
 @end

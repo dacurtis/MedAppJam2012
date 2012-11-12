@@ -9,5 +9,8 @@
 #import <UIKit/UIKit.h>
 
 @interface ViewController : UIViewController
+- (IBAction)reportLater:(id)sender forEvent:(UIEvent *)event;
+
+- (IBAction)reportNow:(id)sender forEvent:(UIEvent *)event;
 
 @end
