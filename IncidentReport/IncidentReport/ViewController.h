@@ -8,9 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
-- (IBAction)reportLater:(id)sender forEvent:(UIEvent *)event;
-
-- (IBAction)reportNow:(id)sender forEvent:(UIEvent *)event;
+@interface ViewController : UIViewController {
+    IBOutlet UIButton *reportLater;
+}
+@property (nonatomic, retain) UIButton *reportLater;
+- (IBAction)buttonPressed:(UIButton *)sender;
 
 @end

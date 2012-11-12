@@ -17,6 +17,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    //incidentQueue = [IncidentQueueController init];
 	// Do any additional setup after loading the view, typically from a nib.
 }
 
@@ -26,14 +27,11 @@
     // Dispose of any resources that can be recreated.
 }
 
-- (IBAction)reportLater:(id)sender forEvent:(UIEvent *)event
+- (IBAction)buttonPressed:(UIButton *)sender 
 {
-    
-}
-
-- (IBAction)reportNow:(id)sender forEvent:(UIEvent *)event
-{
-    
+    NSDate *dateOfIncident = [NSDate date];
+    NSLog(@"button pressed is : %d", [sender tag]);
+    //[incidentQueue enqueue([Incident initReportLater]);
 }
 
 @end
