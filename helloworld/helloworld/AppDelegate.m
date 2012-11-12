@@ -1,6 +1,6 @@
 //
 //  AppDelegate.m
-//  Test
+//  helloworld
 //
 //  Created by App Jam on 11/10/12.
 //  Copyright (c) 2012 App Jam. All rights reserved.
@@ -13,11 +13,6 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
-    if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPad) {
-        UISplitViewController *splitViewController = (UISplitViewController *)self.window.rootViewController;
-        UINavigationController *navigationController = [splitViewController.viewControllers lastObject];
-        splitViewController.delegate = (id)navigationController.topViewController;
-    }
     return YES;
 }
 							

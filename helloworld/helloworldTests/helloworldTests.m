@@ -1,14 +1,14 @@
 //
-//  TestTests.m
-//  TestTests
+//  helloworldTests.m
+//  helloworldTests
 //
 //  Created by App Jam on 11/10/12.
 //  Copyright (c) 2012 App Jam. All rights reserved.
 //
 
-#import "TestTests.h"
+#import "helloworldTests.h"
 
-@implementation TestTests
+@implementation helloworldTests
 
 - (void)setUp
 {
@@ -26,7 +26,7 @@
 
 - (void)testExample
 {
-    STFail(@"Unit tests are not implemented yet in TestTests");
+    STFail(@"Unit tests are not implemented yet in helloworldTests");
 }
 
 @end
