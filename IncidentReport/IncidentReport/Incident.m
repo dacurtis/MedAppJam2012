@@ -10,4 +10,13 @@
 
 @implementation Incident
 @synthesize time,title;
+- (id) initWithName:(NSString *)name atTime:(NSDate *) date{
+    self = [super init];
+    if (self){
+        title = name;
+        time = date;
+        return self;
+    }
+    return nil;
+}
 @end

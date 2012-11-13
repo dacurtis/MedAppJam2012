@@ -9,6 +9,7 @@
 #import <Foundation/Foundation.h>
 
 @interface Incident : NSObject
-@property (weak, nonatomic) NSDate *time;
-@property (weak, nonatomic) NSString *title;
+@property (copy, nonatomic) NSDate *time;
+@property (copy, nonatomic) NSString *title;
+- (id)initWithName:(NSString *)title atTime:(NSDate *) date;
 @end

@@ -18,7 +18,7 @@
     Incident *defaultIncident;
     NSDate *time = [NSDate date];
     defaultIncident= [[Incident alloc] initWithName:@"Incident" atTime:time];
-    [self addIncident @"Incident" time];
+    [self addIncident:defaultIncident];
 
 }
 
