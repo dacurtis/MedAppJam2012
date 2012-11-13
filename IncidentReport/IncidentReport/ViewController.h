@@ -2,16 +2,15 @@
 //  ViewController.h
 //  IncidentReport
 //
-//  Created by Matt Gardner on 11/11/12.
+//  Created by Matt Gardner on 11/12/12.
 //  Copyright (c) 2012 MedAppJam. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController {
-    IBOutlet UIButton *reportLater;
-}
-@property (nonatomic, retain) UIButton *reportLater;
-- (IBAction)buttonPressed:(UIButton *)sender;
+@interface ViewController : UIViewController
+@property (strong, nonatomic) IBOutlet UITableView *incidentTable;
+@property (strong, nonatomic) IBOutlet UIButton *reportLater;
+- (IBAction)buttonPressed:(id)sender;
 
 @end
