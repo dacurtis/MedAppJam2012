@@ -27,5 +27,6 @@
 }
 
 - (IBAction)buttonPressed:(id)sender {
+    NSLog(@"test");
 }
 @end
