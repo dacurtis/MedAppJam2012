@@ -9,5 +9,7 @@
 #import <UIKit/UIKit.h>
 
 @interface ReminderViewController : UIViewController
+@property (strong, nonatomic) IBOutlet UITextField *descriptionField;
+@property (strong, nonatomic) IBOutlet UIDatePicker *reminderTime;
 
 @end

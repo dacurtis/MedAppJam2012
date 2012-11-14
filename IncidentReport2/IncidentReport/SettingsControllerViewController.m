@@ -1,18 +1,18 @@
 //
-//  SettingsController.m
+//  SettingsControllerViewController.m
 //  IncidentReport
 //
 //  Created by App Jam on 11/14/12.
 //  Copyright (c) 2012 MedAppJam. All rights reserved.
 //
 
-#import "SettingsController.h"
+#import "SettingsControllerViewController.h"
 
-@interface SettingsController ()
+@interface SettingsControllerViewController ()
 
 @end
 
-@implementation SettingsController
+@implementation SettingsControllerViewController
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {

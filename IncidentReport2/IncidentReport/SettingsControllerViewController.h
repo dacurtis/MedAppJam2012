@@ -1,5 +1,5 @@
 //
-//  SettingsController.h
+//  SettingsControllerViewController.h
 //  IncidentReport
 //
 //  Created by App Jam on 11/14/12.
@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface SettingsController : UIViewController
+@interface SettingsControllerViewController : UIViewController
 
 @end
