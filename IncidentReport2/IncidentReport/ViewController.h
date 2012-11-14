@@ -12,5 +12,6 @@
 @property (strong, nonatomic) IBOutlet UITableView *incidentTable;
 @property (strong, nonatomic) IBOutlet UIButton *reportLater;
 - (IBAction)buttonPressed:(id)sender;
+@property (weak, nonatomic) IBOutlet UIBarButtonItem *settingsButton;
 
 @end
