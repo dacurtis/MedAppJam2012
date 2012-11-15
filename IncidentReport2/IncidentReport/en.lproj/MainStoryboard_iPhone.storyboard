@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="2843" systemVersion="11G63" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="mhe-MH-CBx">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="2843" systemVersion="12C60" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="mhe-MH-CBx">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="1929"/>
     </dependencies>
@@ -185,20 +185,44 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
             </objects>
             <point key="canvasLocation" x="35" y="686"/>
         </scene>
-        <!--View Controller - Report Incident-->
+        <!--Report Now Controller View Controller - Report Incident-->
         <scene sceneID="eWe-in-w7M">
             <objects>
-                <viewController id="0Cm-Ld-kht" sceneMemberID="viewController">
+                <viewController id="0Cm-Ld-kht" customClass="ReportNowControllerViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Y2u-Ha-7p6">
                         <rect key="frame" x="0.0" y="64" width="320" height="504"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Hospital Where the Incident Ocurred:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="y13-Cq-jDH">
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="HCR-35-1eV">
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="0Cm-Ld-kht" id="lwn-V6-SMT"/>
+                                </connections>
+                            </textField>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="HCR-35-1eV" firstAttribute="top" secondItem="Y2u-Ha-7p6" secondAttribute="top" constant="135" id="MXO-sr-AJj"/>
+                            <constraint firstItem="y13-Cq-jDH" firstAttribute="leading" secondItem="Y2u-Ha-7p6" secondAttribute="leading" constant="12" id="QEg-sy-h10"/>
+                            <constraint firstItem="y13-Cq-jDH" firstAttribute="top" secondItem="Y2u-Ha-7p6" secondAttribute="top" constant="100" id="V3F-B9-dqW"/>
+                            <constraint firstItem="y13-Cq-jDH" firstAttribute="trailing" secondItem="HCR-35-1eV" secondAttribute="trailing" type="default" id="hgW-6B-Jbz"/>
+                            <constraint firstItem="HCR-35-1eV" firstAttribute="leading" secondItem="y13-Cq-jDH" secondAttribute="leading" type="default" id="rjB-c0-cGP"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Report Incident" id="rda-Vi-XiY"/>
+                    <connections>
+                        <outlet property="hospitalField" destination="HCR-35-1eV" id="QxN-nc-tlI"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aja-yw-8Da" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="19" y="-430"/>
+            <point key="canvasLocation" x="-45" y="-454"/>
         </scene>
         <!--Settings View Controller - Settings-->
         <scene sceneID="kNn-Rs-kAi">
@@ -396,6 +420,12 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
             <relationships>
                 <relationship kind="outlet" name="descriptionField" candidateClass="UITextField"/>
                 <relationship kind="outlet" name="reminderTime" candidateClass="UIDatePicker"/>
+            </relationships>
+        </class>
+        <class className="ReportNowControllerViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/ReportNowControllerViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="hospitalField" candidateClass="UITextField"/>
             </relationships>
         </class>
         <class className="SettingsViewController" superclassName="UIViewController">

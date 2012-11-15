@@ -9,5 +9,6 @@
 #import <UIKit/UIKit.h>
 
 @interface ReportNowControllerViewController : UIViewController
+@property (weak, nonatomic) IBOutlet UITextField *hospitalField;
 
 @end

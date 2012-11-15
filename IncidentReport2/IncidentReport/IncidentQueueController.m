@@ -38,7 +38,7 @@
 - (Incident *)getIndex:(NSUInteger)theIndex {
     return [self.incidentList objectAtIndex:theIndex];
 }
-- (Incident *) removeIncident:(NSUInteger) theIndex {
+- (void) removeIncident:(NSUInteger) theIndex {
     [self.incidentList removeObjectAtIndex:theIndex];
 }
 @end

@@ -7,6 +7,7 @@
 //
 
 #import "ReportNowControllerViewController.h"
+#import "DocPath.h"
 
 @interface ReportNowControllerViewController ()
 
@@ -22,7 +23,13 @@
     }
     return self;
 }
-
+- (void) loadView{
+    [super loadView];
+    NSString *path = [DocPath getPath].path;
+    NSLog(@"%@",path);
+    NSDictionary *dict = [[NSMutableDictionary alloc] initWithContentsOfFile:path];
+    [self.hospitalField setText:[dict valueForKey:@"Hospital"]];
+}
 - (void)viewDidLoad
 {
     [super viewDidLoad];
