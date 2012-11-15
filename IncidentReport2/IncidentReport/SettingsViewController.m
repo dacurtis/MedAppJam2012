@@ -18,6 +18,7 @@
 @synthesize hospitalField;
 @synthesize phoneField;
 @synthesize emailField;
+@synthesize roleField;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -37,6 +38,7 @@
     [emailField setText:[dict valueForKey:@"Email"]];
     [phoneField setText:[dict valueForKey:@"Phone #"]];
     [hospitalField setText:[dict valueForKey:@"Hospital"]];
+    [roleField setText:[dict valueForKey:@"Role"]];
 }
 
 - (void)viewDidLoad
@@ -59,9 +61,11 @@
     if([sender tag] == 2)
         [dict setValue:emailField.text forKey:@"Email"];
     if([sender tag] == 3)
-        [dict setValue:hospitalField.text forKey:@"Hospital"];
-    if([sender tag] == 4)
         [dict setValue:phoneField.text forKey:@"Phone #"];
+    if([sender tag] == 4)
+        [dict setValue:hospitalField.text forKey:@"Hospital"];
+    if([sender tag] == 5)
+        [dict setValue:roleField.text forKey:@"Role"];
     
     NSString *docPath = [DocPath getPath].path;
     

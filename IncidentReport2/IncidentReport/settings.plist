@@ -10,5 +10,7 @@
 	<string></string>
 	<key>Name</key>
 	<string>&quot;Hi&quot;</string>
+	<key>Role</key>
+	<string>&quot;Nurse&quot;</string>
 </dict>
 </plist>

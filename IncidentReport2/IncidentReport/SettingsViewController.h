@@ -15,6 +15,8 @@
 @property (strong, nonatomic) IBOutlet UITextField *emailField;
 @property (strong, nonatomic) IBOutlet UITextField *hospitalField;
 @property (strong, nonatomic) IBOutlet UITextField *phoneField;
+@property (strong, nonatomic) IBOutlet UITextField *roleField;
+
 - (IBAction)fieldChanged:(id)sender;
 
 @end
