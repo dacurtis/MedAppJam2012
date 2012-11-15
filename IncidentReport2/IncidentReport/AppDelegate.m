@@ -7,12 +7,27 @@
 //
 
 #import "AppDelegate.h"
-
+#import "DocPath.h"
 @implementation AppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
+    //Gets the bundle and saves the settings in the docPath.
+    
+    NSString *docPath = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) lastObject];
+    docPath = [docPath stringByAppendingPathComponent:@"nmsettings.plist"];
+    NSFileManager *fileManager = [NSFileManager defaultManager];
+    
+    NSString *bundlePath = [[NSBundle mainBundle] pathForResource:@"settings" ofType: @"plist"];
+    [fileManager copyItemAtPath:bundlePath toPath:docPath error:nil];
+    NSLog(@"File copied!");
+    
+    DocPath *path = [DocPath getPath];
+    path.path = docPath;
+    NSLog(@"%@",path);
+    
+    
     return YES;
 }
 							

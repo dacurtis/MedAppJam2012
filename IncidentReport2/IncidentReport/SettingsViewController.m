@@ -7,6 +7,7 @@
 //
 
 #import "SettingsViewController.h"
+#import "DocPath.h"
 
 @interface SettingsViewController ()
 
@@ -29,7 +30,8 @@
 
 - (void)loadView {
     [super loadView];
-    NSString *path = [[NSBundle mainBundle] pathForResource:@"settings" ofType: @"plist"];
+    NSString *path = [DocPath getPath].path;
+    NSLog(@"%@",path);
     dict = [[NSMutableDictionary alloc] initWithContentsOfFile:path];
     [nameField setText:[dict valueForKey:@"Name"]];
     [emailField setText:[dict valueForKey:@"Email"]];
@@ -49,25 +51,8 @@
     // Dispose of any resources that can be recreated.
 }
 
-- (IBAction)saveSettings:(id)sender {
-    NSString *docPath = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) lastObject];
-    docPath = [docPath stringByAppendingPathComponent:@"settings.plist"];
-    NSFileManager *fileManager = [NSFileManager defaultManager];
-    
-    if(![fileManager fileExistsAtPath:docPath]) {
-        NSString *path = [[NSBundle mainBundle] pathForResource:@"settings" ofType: @"plist"];
-        [fileManager copyItemAtPath:path toPath:docPath error:nil];
-    }
-    
-    [dict writeToFile:docPath atomically:YES];
-    NSArray *dictArray = [[NSArray alloc] init];
-    [dictArray setValuesForKeysWithDictionary:dict];
-    [dictArray writeToFile:docPath atomically:YES];
-}
 
 - (IBAction)fieldChanged:(id)sender {
-    NSString *path = [[NSBundle mainBundle] pathForResource:@"settings" ofType: @"plist"];
-    dict = [[NSMutableDictionary alloc] initWithContentsOfFile:path];
     
     if([sender tag] == 1)
         [dict setValue:nameField.text forKey:@"Name"];
@@ -77,6 +62,14 @@
         [dict setValue:hospitalField.text forKey:@"Hospital"];
     if([sender tag] == 4)
         [dict setValue:phoneField.text forKey:@"Phone #"];
+    
+    NSString *docPath = [DocPath getPath].path;
+    
+    [dict writeToFile:docPath atomically:YES];
+}
+- (BOOL)textFieldShouldReturn:(UITextField *)theTextField {
+    [theTextField resignFirstResponder];
+    return YES;
 }
 
 
